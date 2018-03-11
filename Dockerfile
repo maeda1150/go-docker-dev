@@ -26,6 +26,7 @@ RUN apt-get update                                                      && \
     go get github.com/kisielk/errcheck                                  && \
     go get github.com/jstemmer/gotags                                   && \
     go get github.com/tools/godep                                       && \
+    go get github.com/derekparker/delve/cmd/dlv                         && \
     mv /go/bin/* /usr/local/go/bin                                      && \
 # add dev user
     adduser dev --disabled-password --gecos ""                          && \
