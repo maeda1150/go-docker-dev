@@ -27,6 +27,16 @@ RUN apt-get update                                                      && \
     go get github.com/jstemmer/gotags                                   && \
     go get github.com/tools/godep                                       && \
     go get github.com/derekparker/delve/cmd/dlv                         && \
+    go get github.com/zmb3/gogetdoc                                     && \
+    go get golang.org/x/tools/cmd/guru                                  && \
+    go get github.com/davidrjenni/reftools/cmd/fillstruct               && \
+    go get github.com/fatih/motion                                      && \
+    go get github.com/josharian/impl                                    && \
+    go get github.com/fatih/gomodifytags                                && \
+    go get github.com/dominikh/go-tools/cmd/keyify                      && \
+    go get github.com/klauspost/asmfmt/cmd/asmfmt                       && \
+    go get github.com/alecthomas/gometalinter                           && \
+    go get github.com/zmb3/gogetdoc                                     && \
     mv /go/bin/* /usr/local/go/bin                                      && \
 # add dev user
     adduser dev --disabled-password --gecos ""                          && \
