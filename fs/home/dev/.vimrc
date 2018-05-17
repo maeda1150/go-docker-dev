@@ -81,7 +81,14 @@ let g:tagbar_type_go = {
 nmap <F2> :tabnew<CR>
 nmap <F3> :tabclose<CR>
 nmap <F5> :UndotreeToggle<CR>
-nmap <F7> :NERDTreeTabsToggle<CR>
+" nmap <F7> :NERDTreeTabsToggle<CR>
+" for NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+nmap <silent> <C-L>      :NERDTreeToggle<CR>
+vmap <silent> <C-L> <Esc>:NERDTreeToggle<CR>
+omap <silent> <C-L>      :NERDTreeToggle<CR>
+imap <silent> <C-L> <Esc>:NERDTreeToggle<CR>
+cmap <silent> <C-L> <C-u>:NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 nmap <C-Left> :tabprevious<CR>
 nmap <C-Right> :tabnext<CR>
